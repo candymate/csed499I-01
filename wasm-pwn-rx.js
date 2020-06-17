@@ -283,4 +283,4 @@ else {
 const f = wasm_instance.exports.main;
 f();
 
-while(1);
+// while(1);
